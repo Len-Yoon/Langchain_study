@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 import requests
 
-load_dotenv("key.env")
+load_dotenv("../key.env")
 
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
@@ -30,7 +30,7 @@ image_url = response.data[0].url
 # 이미지 다운로드 및 저장
 image_response = requests.get(image_url)
 if image_response.status_code == 200:
-    with open("guitar_bear.png", "wb") as f:
+    with open("../guitar_bear.png", "wb") as f:
         f.write(image_response.content)
     print("이미지 저장 완료: guitar_bear.png")
 else:

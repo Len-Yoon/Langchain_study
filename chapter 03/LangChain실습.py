@@ -2,7 +2,7 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv("key.env")
+load_dotenv("../key.env")
 
 # 프롬프트 템플릿 설정
 from langchain.prompts import PromptTemplate

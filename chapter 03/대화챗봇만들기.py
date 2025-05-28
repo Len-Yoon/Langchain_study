@@ -1,7 +1,7 @@
 # OpenAI 키 설치
 import os
 from dotenv import load_dotenv
-load_dotenv("key.env")
+load_dotenv("../key.env")
 
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
