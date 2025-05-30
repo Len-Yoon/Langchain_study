@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 from openai.resources.beta import assistants
 
-load_dotenv("../key.env")
+load_dotenv("../../key.env")
 
 # LLM 설정
 from openai import OpenAI
