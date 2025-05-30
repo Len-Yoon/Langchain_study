@@ -174,3 +174,18 @@ response = get_response(thread)
 bullet_points = response.data[0].content[0].text.value
 
 print(bullet_points)
+
+# 통찰에 기반한 제목 생성
+submit_message_wait_completion(
+    assistant_id=assistant.id,
+    thread=thread,
+    user_message='당신이 만든 차트와 통찰을 바탕으로, 주요 통찰을 반영하는 아주 짧은 프레젠테이션 제목을 만들어 주세요.'
+)
+
+# 응답 대기 후 생성된 제목 출력
+time.sleep(10)  # 도우미가 제목을 생성하는 데 시긴이 필요하다고 가정
+
+response = get_response(thread)
+title = response.data[0].content[0].text.value
+
+print(title)
