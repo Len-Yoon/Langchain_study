@@ -16,6 +16,3 @@ assistant = client.beta.assistants.retrieve(assistant_id)
 
 # 도우미 출력
 # print(assistant)
-
-# 도우미 생성
-a
