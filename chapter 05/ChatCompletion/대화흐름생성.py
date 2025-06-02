@@ -71,7 +71,7 @@ tool_calls = response_message.tool_calls
 if tool_calls:
     messages.append(response_message)
 
-# 도구 호출이 필요할 경우, 도구를 호출하고 재고 조회 겨로가 추가
+# 도구 호출이 필요할 경우, 도구를 호출하고 재고 조회 경로가 추가
 for tool_call in tool_calls:
     function_name = tool_call.function.name
     function_args = json.loads(tool_call.function.arguments)
